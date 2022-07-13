@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Principal {
 
     public static void main(String[] args) {
@@ -12,10 +14,11 @@ public class Principal {
         voce.anoNascimento = 1990;
 
         Carro meuCarro = new Carro();
-        meuCarro.anoFabricacao = 2021;
+        meuCarro.anoFabricacao = 2015;
         meuCarro.cor = "preto";
         meuCarro.fabricante = "Honda";
         meuCarro.modelo = "HR-V";
+        meuCarro.precoCompra = 120000;
         meuCarro.proprietario = eu;
 
         Carro seuCarro = new Carro();
@@ -23,20 +26,25 @@ public class Principal {
         seuCarro.cor = "Branco";
         seuCarro.fabricante = "BMW";
         seuCarro.modelo = "X6";
+        seuCarro.precoCompra = 160000;
         seuCarro.proprietario = voce;
 
-        System.out.println("Meu carro");
-        System.out.println("----------");
-        System.out.printf("Modelo: %s%n", meuCarro.modelo);
-        System.out.printf("Ano: %d%n", meuCarro.anoFabricacao);
+        meuCarro.calcularValorRevenda();
+        seuCarro.calcularValorRevenda();
 
-
-        System.out.println();
-
-        System.out.println("Seu carro");
-        System.out.println("----------");
-        System.out.printf("Modelo: %s%n", seuCarro.modelo);
-        System.out.printf("Ano: %d%n", seuCarro.anoFabricacao);
+//        System.out.println("Meu carro");
+//        System.out.println("----------");
+//        System.out.printf("Modelo: %s%n", meuCarro.modelo);
+//        System.out.printf("Modelo: %d%n", meuCarro.anoFabricacao);
+//        System.out.printf("Proprietário: %s%n", meuCarro.proprietario.nome);
+//
+//        System.out.println();
+//
+//        System.out.println("Seu carro");
+//        System.out.println("----------");
+//        System.out.printf("Modelo: %s%n", seuCarro.modelo);
+//        System.out.printf("Modelo: %d%n", seuCarro.anoFabricacao);
+//        System.out.printf("Proprietário: %s%n", seuCarro.proprietario.nome);
 
 
     }

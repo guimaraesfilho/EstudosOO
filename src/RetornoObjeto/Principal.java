@@ -2,13 +2,15 @@ package RetornoObjeto;
 
 public class Principal {
     public static void main(String[] args) {
-        Paciente paciente = new Paciente();
-        paciente.altura = 1.82;
-        paciente.peso = 175;
+        CalculadoraImc calculadoraImc = new CalculadoraImc();
 
-        IndiceMassaCorporal imc = paciente.calcularIndiceMassaCorporal();
+        Paciente joao = new Paciente();
+        joao.peso = 175;
+        joao.altura = 1.82;
 
-        if (imc.resultado >= 30) {
+        IndiceMassaCorporal imc = calculadoraImc.calcular(joao);
+
+        if (imc.estaComObesidade()) {
             System.out.printf("Paciente com altura de %.2f e peso de %.2f " +
                     "está com obesidade%n", imc.altura, imc.peso);
         }

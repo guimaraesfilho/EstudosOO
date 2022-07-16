@@ -1,0 +1,15 @@
+package MatematicaUltil;
+
+public class CalculadoraArea {
+
+    static final double PI = 3.14159265358979323846;
+
+    public static double calculadoraAreaQuadrado(double medidaDoLado){
+        return medidaDoLado * medidaDoLado;
+    }
+
+    public static double calcularAreaCirculo(double raio) {
+        return raio * raio * CalculadoraArea.PI;
+    }
+
+}
